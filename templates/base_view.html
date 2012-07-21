@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+<h1>What?</h1>
+
+<p>HealthyThis! is a community-driven news site. Users post links of contents that promote healthy and well-being lifestyles. The contents are chosen and summarized by the community to ensure their quality.</p>
+
+<h1>How?</h1>
+
+<p>Use your <b>Google Account</b> to <a href="{{ "/"|create_login_url }}">login</a> and <a href="/posts/new">make a post</a>.</p>
+
+<h1>Why?</h1>
+
+<p>This site aims to improve the quality of health-related news in developing countries.</p>
+
+<p>The community identify contents. Information outposts, from town primacy care units to media corporations, can follow and convey the news to their audiences.</p>
+
+<h1>Suggestion?</h1>
+
+<p>This is the beta test. Your suggestions are appreciated. Please send them to support at usablelabs dot org.</p>
+
+<h1>Feeds</h1>
+
+<p>
+	<img src="/images/feed-icon-14x14.png" align="absmiddle" /> <a href="/posts.rss">All Posts</a><br />
+	{% if byline %}
+	<img src="/images/feed-icon-14x14.png" align="absmiddle" /> <a href="/posts/{{ byline }}.rss">Posts by {{ byline }}</a><br />
+	{% endif %}
+</p>
+
+{% endblock %}

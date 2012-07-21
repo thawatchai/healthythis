@@ -1,0 +1,34 @@
+{% extends "base_view.html" %}
+
+{% block content %}
+
+{% if byline %}
+	<div class="byline">
+		<h1>{{ byline }}</h1>
+	</div>
+{% endif %}
+
+{% if posts %}
+	{% for post in posts %}
+		{% ifchanged post.created_at.date %}
+			<h1>{{ post.created_at|show_date }}</h1>
+		{% endifchanged %}
+		{{ post|show_post:current_user }}
+	{% endfor %}
+
+	<div class="paginator">
+		{% if has_older_posts %}
+			&laquo; <a href="?page={{ page|add:"1" }}">Older</a>
+		{% endif %}
+		{% ifnotequal page 1 %}
+			{% if has_older_posts %}
+				&nbsp;|&nbsp;
+			{% endif %}
+			<a href="?page={{ page|add:"-1" }}">Newer</a> &raquo;
+		{% endifnotequal %}
+	</div>
+{% else %}
+	<h1>No Posts.</h1>
+{% endif %}
+
+{% endblock %}

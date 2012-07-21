@@ -1,0 +1,11 @@
+{% extends "base_view.html" %}
+
+{% block content %}
+
+<h1>Post</h1>
+
+{{ post|show_post:current_user }}
+
+<div class="post">[<a href="/">Home</a> &sdot; <a href="/posts/new">Create a Post</a> &sdot; <a href="/posts/{{ current_user.nickname }}">My Posts</a>]</div>
+
+{% endblock %}

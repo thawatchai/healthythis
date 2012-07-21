@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>HealthyThis! {{ title }}</title>
+
+		<link rel="stylesheet" type="text/css" href="/javascripts/yui/build/reset-fonts-grids/reset-fonts-grids.css" />
+		{% if enable_editor %}
+			<script type="text/javascript" src="/javascripts/tiny_mce/tiny_mce.js"></script> 
+		{% endif %}
+
+		<link rel="stylesheet" type="text/css" href="/stylesheets/base.css">
+		<link rel="alternate" type="application/rss+xml" title="HealthyThis!" href="/posts.rss">
+		{% if byline %}
+			<link rel="alternate" type="application/rss+xml" title="HealthyThis!" href="/posts/{{ byline }}.rss">
+		{% endif %}
+	</head>
+	<body class="yui-skin-sam">
+		<div id="doc3">
+			<div id="hd">
+				<div id="hd-bar">{{ current_user|headbar }}</div>
+				<a href="/"><img src="/images/logo.gif" alt="HealthyThis!" border="0" /></a><br />
+			</div>
+
+			{% if note %}
+				<div class="flash"><span class="note">{{ note }}</span></div>
+			{% endif %}
+			{% if notice %}
+				<div class="flash"><span class="notice">{{ notice }}</span></div>
+			{% endif %}
+
+			<div id="bd">
+				<div class="yui-t4">
+					<div id="yui-main">
+						<div class="yui-b" id="content">{% block content %}{% endblock %}</div>
+					</div>
+					<div class="yui-b" id="sidebar">{% block sidebar %}{% endblock %}</div>
+				</div>
+			</div>
+
+			<div id="ft">
+				<center>
+					<div id="sponsor-logo">
+						<img src="/images/thf.gif" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/psu.gif" />
+					</div>
+				</center>
+
+				People from <a href="http://en.wikipedia.org/wiki/Afghanistan">Afghanistan</a> <a href="http://en.wikipedia.org/wiki/List_of_countries">to</a> <a href="http://en.wikipedia.org/wiki/Zimbabwe">Zimbabwe</a> deserve to live equally healthy!<br />
+				<a href="http://www.thaihealth.or.th/">Thai Health Promotion Foundation</a> and <a href="http://www.psu.ac.th/">Prince of Songkla University</a> wish you healthy and happy!!<br />
+				The content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.<br />
+				Contact: support at <a href="http://usablelabs.org">UsableLabs</a> dot org<br /><br />
+
+				Disclaimer: We try our best, but we DO NOT guarantee any validity of the information presented in this site. Use it at your own risk!
+			</div>
+		</div>
+	</body>
+</html>

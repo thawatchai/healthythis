@@ -1,0 +1,159 @@
+html {
+}
+
+body {
+	font-family: verdana, sans-serif;
+}
+
+body strong {
+	font-weight: bold;
+}
+
+body em {
+	font-style: italic;
+}
+
+a:link, a:visited {
+	color: #00e;
+}
+
+div#doc3 {
+	margin: auto;
+}
+
+div#hd {
+	background: #005e14;
+	border-bottom: 4px solid #00ab24;
+	height: 45px;
+}
+
+div#hd-bar {
+	color: #fff;
+	text-align: right;
+	float: right;
+	padding: 4px 20px 0px 0px;
+}
+
+div#hd-bar a:link, div#hd-bar a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+div#hd-bar a:hover {
+	text-decoration: underline;
+}
+
+div#hd-bar span.hilight {
+	color: #fc0;
+}
+
+div.flash {
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin: 4px;
+	padding: 4px;
+}
+
+div.flash span.note {
+	padding: 4px 30px;
+	background: #00ab24;
+}
+
+div.flash span.notice {
+	padding: 4px 30px;
+	background: #e00;
+}
+
+div#bd {
+	background: #fff;
+	padding: 10px 0px;
+}
+
+div#bd h1 {
+	color: #005e14;
+	font-weight: bold;
+	font-size: 1.3em;
+	padding: 6px 0px 10px;
+}
+
+div#content p {
+	padding-bottom: 4px;
+}
+
+div#sidebar p {
+	padding: 4px 0px 12px;
+}
+
+div.byline {
+	margin-bottom: 10px;
+	border-bottom: 2px solid #00ab24;
+}
+
+div.post {
+	margin-bottom: 4px;
+	padding: 12px 4px 0px 12px;
+}
+
+div.post p.info {
+	font-size: 0.8em;
+	color: #888;
+}
+
+div.post p.info a:link, div.post p.info a:visited {
+	color: #888;
+}
+
+div.paginator {
+	color: #666;
+	padding: 20px 0px;
+}
+
+div#ft {
+	font-size: 0.8em;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+div#ft a:link, div#ft a:visited {
+}
+
+div#ft div#sponsor-logo {
+	width: 250px;
+	background: #fff;
+	margin: 10px;
+	padding: 6px;
+	text-align: center;
+}
+
+textarea.common-form {
+	width: 450px;
+	height: 150px;
+}
+
+input.common-form {
+	width: 450px;
+}
+
+.alert-border {
+	border: 2px solid #e00;
+}
+
+.editor-hidden {
+	visibility: hidden;
+	top: -9999px;
+	left: -9999px;
+	position: absolute;
+}
+
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-editcode span.yui-toolbar-icon {
+    background-image: url( assets/html_editor.gif );
+    background-position: 0 1px;
+    left: 5px;
+}
+.yui-skin-sam .yui-toolbar-container .yui-button-editcode-selected span.yui-toolbar-icon {
+    background-image: url( assets/html_editor.gif );
+    background-position: 0 1px;
+    left: 5px;
+}
+

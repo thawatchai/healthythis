@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>
+			HealthyThis!
+			{% if byline %}
+				by {{ byline }}
+			{% endif %}
+		</title>
+		<link>
+			{% if byline %}
+				http://healthythis.org/posts/{{ byline }}
+			{% else %}
+				http://healthythis.org/
+			{% endif %}
+		</link>
+		<description>News for healthy lifestyles summarized by communities.</description>
+
+		{% for post in posts %}
+			<item>
+				<title>{{ post|get_post_title|striptags }}</title>
+				<description>{{ post.content|escape }}</description>
+				<link>http://healthythis.org/posts?key={{ post.key }}</link>
+				<guid>http://healthythis.org/posts?key={{ post.key }}</guid>
+				<pubDate>{{ post.created_at|pub_date }}</pubDate>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
