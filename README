@@ -1,3 +1,3 @@
 This repository contains the source code of now-defunct HealthyThis.org
 
-The source is released for public domain.
+The source is released to public domain as an example of a web app that ran on Google App Engine in 2008. It mightn't run now. It uses Google's simple "webapp" framework and store data in Google's DataStore.
